@@ -424,7 +424,7 @@ class ControllerPlotterDialog(ModuleDialog):
         try:
             data_from_hardware_manager = self.data[JOANModules.HARDWARE_MANAGER].inputs['SensoDrive_1']
         except KeyError:
-            data_from_hardware_manage = {}
+            data_from_hardware_manager = {}
 
         try:
             data_from_carla_interface = self.data[JOANModules.CARLA_INTERFACE].agents['Ego Vehicle_1']
