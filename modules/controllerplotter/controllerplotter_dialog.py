@@ -162,7 +162,7 @@ class ControllerPlotterDialog(ModuleDialog):
 
         # Top view graph
         try:
-            tmp = pd.read_csv(os.path.join('trajectories/', trajectory_name))
+            tmp = pd.read_csv(os.path.join('trajectories/', 'hcr_demomap.csv'))
             plot_data_hcr_x = tmp.values[:, 1]
             plot_data_hcr_y = tmp.values[:, 2]
 
