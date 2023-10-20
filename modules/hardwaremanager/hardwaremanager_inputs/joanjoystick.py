@@ -67,7 +67,7 @@ class JOANJoystickProcess:
                     self.brake = -input_value
 
             self.handbrake = bool(joystick_data[self.settings.hand_brake_channel] & self.settings.hand_brake_value)
-            self.reverse = bool(joystick_data[self.settings.reverse_channel] & self.settings.reverse_value)
+            self.reverse = bool(not joystick_data[self.settings.reverse_channel] & self.settings.reverse_value)
 
             if self.settings.use_double_steering_resolution:
                 self.steer = (((joystick_data[self.settings.first_steer_channel]) + (
@@ -97,16 +97,16 @@ class JoyStickSettings:
         self.input_type = HardwareInputTypes.JOYSTICK.value
 
         self.degrees_of_freedom = 12
-        self.gas_channel = 9
-        self.use_separate_brake_channel = False
-        self.brake_channel = -1
-        self.first_steer_channel = 0
-        self.use_double_steering_resolution = True
+        self.gas_channel = 7
+        self.use_separate_brake_channel = True
+        self.brake_channel = 8
+        self.first_steer_channel = 6
+        self.use_double_steering_resolution = False
         self.second_steer_channel = 1
         self.hand_brake_channel = 10
         self.hand_brake_value = 2
-        self.reverse_channel = 10
-        self.reverse_value = 8
+        self.reverse_channel = 9
+        self.reverse_value = 1
 
     def as_dict(self):
         return_dict = self.__dict__.copy()

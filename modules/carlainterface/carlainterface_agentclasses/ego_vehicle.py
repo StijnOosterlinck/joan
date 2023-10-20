@@ -420,11 +420,11 @@ class EgoVehicleSettings:
         self.selected_input = 'None'
         self.selected_controller = 'None'
         self.selected_spawnpoint = 'Spawnpoint 0'
-        self.selected_car = 'audi.hapticslab'
+        self.selected_car = 'hapticslab.audi'
         self.velocity = 50
         self.set_velocity = False
         self.identifier = identifier
-        self.steering_ratio = 13
+        self.steering_ratio = 3
         self.agent_type = AgentTypes.EGO_VEHICLE.value
 
         self.use_custom_spawn_point = False
