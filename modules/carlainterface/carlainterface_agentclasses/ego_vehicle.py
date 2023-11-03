@@ -214,10 +214,10 @@ class EgoVehicleProcess:
                 physics.use_gear_autobox = False
 
                 wheels = copy.copy(physics.wheels)
-                wheels[0].max_brake_torque = 1500.
-                wheels[1].max_brake_torque = 1500.
-                wheels[2].max_brake_torque = 1400.
-                wheels[3].max_brake_torque = 1400.
+                wheels[0].max_brake_torque = 4000.
+                wheels[1].max_brake_torque = 4000.
+                wheels[2].max_brake_torque = 3900.
+                wheels[3].max_brake_torque = 3900.
                 physics.wheels = wheels
 
                 self.spawned_vehicle.apply_physics_control(physics)
